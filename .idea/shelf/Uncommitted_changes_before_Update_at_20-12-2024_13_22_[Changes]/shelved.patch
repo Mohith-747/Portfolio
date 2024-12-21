@@ -1,0 +1,13 @@
+Index: package.json
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>{\r\n  \"dependencies\": {\r\n    \"react\": \"^19.0.0\",\r\n    \"react-dom\": \"^19.0.0\"\r\n  }\r\n}\r\n
+===================================================================
+diff --git a/package.json b/package.json
+--- a/package.json	(revision 3d57310371261ffd18d678f1828f60f8adf9ffc5)
++++ b/package.json	(date 1734679571874)
+@@ -4,3 +4,4 @@
+     "react-dom": "^19.0.0"
+   }
+ }
++
