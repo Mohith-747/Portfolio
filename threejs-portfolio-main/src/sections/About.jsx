@@ -25,7 +25,7 @@ const About = () => {
             <div>
               <p className="grid-headtext">Hi, I’m Mohith Choudary</p>
               <p className="grid-subtext">
-                Hey!! I am a computer..Ill update this in about.
+                Hey,I am a highly Motivated Computer Science Student with a passion for development innovative solutions. Skilled in Game development, Machine Learning, Software development. A collaborative team player with strong commitment to delivering results and driving success.
               </p>
             </div>
           </div>

@@ -1,0 +1,55 @@
+Index: threejs-portfolio-main/src/sections/About.jsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import { useState } from 'react';\r\nimport Globe from 'react-globe.gl';\r\n\r\nimport Button from '../components/Button.jsx';\r\n\r\nconst About = () => {\r\n  const [hasCopied, setHasCopied] = useState(false);\r\n\r\n  const handleCopy = () => {\r\n    navigator.clipboard.writeText('choudharymohith@gmail.com');\r\n    setHasCopied(true);\r\n\r\n    setTimeout(() => {\r\n      setHasCopied(false);\r\n    }, 2000);\r\n  };\r\n\r\n  return (\r\n    <section className=\"c-space my-20\" id=\"about\">\r\n      <div className=\"grid xl:grid-cols-3 xl:grid-rows-6 md:grid-cols-2 grid-cols-1 gap-5 h-full\">\r\n        <div className=\"col-span-1 xl:row-span-3\">\r\n          <div className=\"grid-container\">\r\n            <img src=\"assets/grid1.png\" alt=\"grid-1\" className=\"w-full sm:h-[276px] h-fit object-contain\" />\r\n\r\n            <div>\r\n              <p className=\"grid-headtext\">Hi, I’m Mohith Choudary</p>\r\n              <p className=\"grid-subtext\">\r\n                Hey!! I am a computer..Ill update this in about.\r\n              </p>\r\n            </div>\r\n          </div>\r\n        </div>\r\n\r\n        <div className=\"col-span-1 xl:row-span-3\">\r\n          <div className=\"grid-container\">\r\n            <img src=\"assets/grid2.png\" alt=\"grid-2\" className=\"w-full sm:h-[276px] h-fit object-contain\" />\r\n\r\n            <div>\r\n              <p className=\"grid-headtext\">Tech Stack</p>\r\n              <p className=\"grid-subtext\">\r\n                I specialize in a variety of languages, frameworks, and tools that allow me to build robust and scalable\r\n                applications\r\n              </p>\r\n            </div>\r\n          </div>\r\n        </div>\r\n\r\n        <div className=\"col-span-1 xl:row-span-4\">\r\n          <div className=\"grid-container\">\r\n            <div className=\"rounded-3xl w-full sm:h-[326px] h-fit flex justify-center items-center\">\r\n              <Globe\r\n                height={326}\r\n                width={326}\r\n                backgroundColor=\"rgba(0, 0, 0, 0)\"\r\n                backgroundImageOpacity={0.5}\r\n                showAtmosphere\r\n                showGraticules\r\n                globeImageUrl=\"//unpkg.com/three-globe/example/img/earth-night.jpg\"\r\n                bumpImageUrl=\"//unpkg.com/three-globe/example/img/earth-topology.png\"\r\n                labelsData={[{ lat: 40, lng: -100, text: 'Mysore, India', color: 'white', size: 15 }]}\r\n              />\r\n            </div>\r\n            <div>\r\n              <p className=\"grid-headtext\">I’m very flexible with time zone communications & locations</p>\r\n              <p className=\"grid-subtext\">I&apos;Im based in Mysore,India and open to remote work worldwide.</p>\r\n              <Button name=\"Contact Me\" isBeam containerClass=\"w-full mt-10\" />\r\n            </div>\r\n          </div>\r\n        </div>\r\n\r\n        <div className=\"xl:col-span-2 xl:row-span-3\">\r\n          <div className=\"grid-container\">\r\n            <img src=\"assets/grid3.png\" alt=\"grid-3\" className=\"w-full sm:h-[266px] h-fit object-contain\" />\r\n\r\n            <div>\r\n              <p className=\"grid-headtext\">My Passion for Coding</p>\r\n              <p className=\"grid-subtext\">\r\n                I love solving problems and building things through code. Programming isn&apos;t just my\r\n                profession—it&apos;s my passion. I enjoy exploring new technologies, and enhancing my skills.\r\n              </p>\r\n            </div>\r\n          </div>\r\n        </div>\r\n\r\n        <div className=\"xl:col-span-1 xl:row-span-2\">\r\n          <div className=\"grid-container\">\r\n            <img\r\n              src=\"assets/grid4.png\"\r\n              alt=\"grid-4\"\r\n              className=\"w-full md:h-[126px] sm:h-[276px] h-fit object-cover sm:object-top\"\r\n            />\r\n\r\n            <div className=\"space-y-2\">\r\n              <p className=\"grid-subtext text-center\">Contact me</p>\r\n              <div className=\"copy-container\" onClick={handleCopy}>\r\n                <img src={hasCopied ? 'assets/tick.svg' : 'assets/copy.svg'} alt=\"copy\" />\r\n                <p className=\"lg:text-2xl md:text-xl font-medium text-gray_gradient text-white\">choudharymohith@gmail.com</p>\r\n              </div>\r\n            </div>\r\n          </div>\r\n        </div>\r\n      </div>\r\n    </section>\r\n  );\r\n};\r\n\r\nexport default About;\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/threejs-portfolio-main/src/sections/About.jsx b/threejs-portfolio-main/src/sections/About.jsx
+--- a/threejs-portfolio-main/src/sections/About.jsx	(revision 3d57310371261ffd18d678f1828f60f8adf9ffc5)
++++ b/threejs-portfolio-main/src/sections/About.jsx	(date 1734680125374)
+@@ -25,7 +25,7 @@
+             <div>
+               <p className="grid-headtext">Hi, I’m Mohith Choudary</p>
+               <p className="grid-subtext">
+-                Hey!! I am a computer..Ill update this in about.
++                Hey,I am a highly Motivated Computer Science Student with a passion for development innovative solutions. Skilled in Game development, Machine Learning, Software development. A collaborative team player with strong commitment to delivering results and driving success.
+               </p>
+             </div>
+           </div>
+Index: threejs-portfolio-main/src/sections/Hero.jsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import { Leva } from 'leva';\r\nimport { Suspense } from 'react';\r\nimport { Canvas } from '@react-three/fiber';\r\nimport { useMediaQuery } from 'react-responsive';\r\nimport { PerspectiveCamera } from '@react-three/drei';\r\n\r\nimport Cube from '../components/Cube.jsx';\r\nimport Rings from '../components/Rings.jsx';\r\nimport ReactLogo from '../components/ReactLogo.jsx';\r\nimport Button from '../components/Button.jsx';\r\nimport Target from '../components/Target.jsx';\r\nimport CanvasLoader from '../components/Loading.jsx';\r\nimport HeroCamera from '../components/HeroCamera.jsx';\r\nimport { calculateSizes } from '../constants/index.js';\r\nimport { HackerRoom } from '../components/HackerRoom.jsx';\r\n\r\nconst Hero = () => {\r\n  // Use media queries to determine screen size\r\n  const isSmall = useMediaQuery({ maxWidth: 440 });\r\n  const isMobile = useMediaQuery({ maxWidth: 768 });\r\n  const isTablet = useMediaQuery({ minWidth: 768, maxWidth: 1024 });\r\n\r\n  const sizes = calculateSizes(isSmall, isMobile, isTablet);\r\n\r\n  return (\r\n    <section className=\"min-h-screen w-full flex flex-col relative\" id=\"home\">\r\n      <div className=\"w-full mx-auto flex flex-col sm:mt-36 mt-20 c-space gap-3\">\r\n        <p className=\"sm:text-3xl text-xl font-medium text-white text-center font-generalsans\">\r\n          Hi, I am Mohith <span className=\"waving-hand\">\uD83D\uDC4B</span>\r\n        </p>\r\n        <p className=\"hero_tag text-gray_gradient\">Developing Games and Products</p>\r\n      </div>\r\n\r\n      <div className=\"w-full h-full absolute inset-0\">\r\n        <Canvas className=\"w-full h-full\">\r\n          <Suspense fallback={<CanvasLoader />}>\r\n            {/* To hide controller */}\r\n            <Leva hidden />\r\n            <PerspectiveCamera makeDefault position={[0, 0, 30]} />\r\n\r\n            <HeroCamera isMobile={isMobile}>\r\n              <HackerRoom scale={sizes.deskScale} position={sizes.deskPosition} rotation={[0.1, -Math.PI, 0]} />\r\n            </HeroCamera>\r\n\r\n            <group>\r\n              <Target position={sizes.targetPosition} />\r\n              <ReactLogo position={sizes.reactLogoPosition} />\r\n              <Rings position={sizes.ringPosition} />\r\n              <Cube position={sizes.cubePosition} />\r\n            </group>\r\n\r\n            <ambientLight intensity={1} />\r\n            <directionalLight position={[10, 10, 10]} intensity={0.5} />\r\n          </Suspense>\r\n        </Canvas>\r\n      </div>\r\n\r\n      <div className=\"absolute bottom-7 left-0 right-0 w-full z-10 c-space\">\r\n        <a href=\"#about\" className=\"w-fit\">\r\n          <Button name=\"Let's work together\" isBeam containerClass=\"sm:w-fit w-full sm:min-w-96\" />\r\n        </a>\r\n      </div>\r\n    </section>\r\n  );\r\n};\r\n\r\nexport default Hero;\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/threejs-portfolio-main/src/sections/Hero.jsx b/threejs-portfolio-main/src/sections/Hero.jsx
+--- a/threejs-portfolio-main/src/sections/Hero.jsx	(revision 3d57310371261ffd18d678f1828f60f8adf9ffc5)
++++ b/threejs-portfolio-main/src/sections/Hero.jsx	(date 1734680175213)
+@@ -4,11 +4,7 @@
+ import { useMediaQuery } from 'react-responsive';
+ import { PerspectiveCamera } from '@react-three/drei';
+ 
+-import Cube from '../components/Cube.jsx';
+-import Rings from '../components/Rings.jsx';
+-import ReactLogo from '../components/ReactLogo.jsx';
+ import Button from '../components/Button.jsx';
+-import Target from '../components/Target.jsx';
+ import CanvasLoader from '../components/Loading.jsx';
+ import HeroCamera from '../components/HeroCamera.jsx';
+ import { calculateSizes } from '../constants/index.js';
+@@ -42,13 +38,6 @@
+               <HackerRoom scale={sizes.deskScale} position={sizes.deskPosition} rotation={[0.1, -Math.PI, 0]} />
+             </HeroCamera>
+ 
+-            <group>
+-              <Target position={sizes.targetPosition} />
+-              <ReactLogo position={sizes.reactLogoPosition} />
+-              <Rings position={sizes.ringPosition} />
+-              <Cube position={sizes.cubePosition} />
+-            </group>
+-
+             <ambientLight intensity={1} />
+             <directionalLight position={[10, 10, 10]} intensity={0.5} />
+           </Suspense>
