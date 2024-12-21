@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12d22ef3-2036-418f-a1e0-fc8464fe33ad" name="Changes" comment="V2">
-      <change beforePath="$PROJECT_DIR$/threejs-portfolio-main/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/threejs-portfolio-main/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/threejs-portfolio-main/src/sections/About.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/threejs-portfolio-main/src/sections/About.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/threejs-portfolio-main/src/sections/Hero.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/threejs-portfolio-main/src/sections/Hero.jsx" afterDir="false" />
-    </list>
+    <list default="true" id="12d22ef3-2036-418f-a1e0-fc8464fe33ad" name="Changes" comment="V2" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,6 +100,7 @@
       <workItem from="1734671912601" duration="8007000" />
       <workItem from="1734681431856" duration="31000" />
       <workItem from="1734681465607" duration="1196000" />
+      <workItem from="1734782037845" duration="627000" />
     </task>
     <servers />
   </component>
