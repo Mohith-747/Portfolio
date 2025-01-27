@@ -1,0 +1,298 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Website</title>
+  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+  <script src="https://unpkg.com/lucide@0.171.0"></script>
+</head>
+<body>
+  <header>
+    <a href="#" class="logo">MC</a>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+  </header>
+
+  <section>
+    <img src="assets/stars.png" id ="stars">
+    <img src="assets/moon.png" id ="moon">
+    <img src="assets/mountains_behind.png" id ="mountains_behind">
+    <h2 id="text">Mohith Choudhary</h2>
+    <a href="#about" id="btn">Explore</a> 
+    <img src="assets/mountains_front.png" id ="mountains_front">
+  </section>
+  
+  <script>
+    let stars = document.getElementById('stars');
+    let moon = document.getElementById('moon');
+    let mountains_behind = document.getElementById('mountains_behind');
+    let text = document.getElementById('text');
+    let btn = document.getElementById('btn');
+    let mountains_front = document.getElementById('mountains_front');
+    let header = document.querySelector('header');
+
+    window.addEventListener('scroll',function(){
+        let value = window.scrollY;
+        stars.style.left = value*0.25 + 'px';
+        moon.style.top = value*1.05 + 'px';
+        mountains_behind.style.top = value*0.5 + 'px';
+        mountains_front.style.top = value*0 + 'px';
+        text.style.marginRight = value *2 + 'px';
+        text.style.marginTop = value *1 + 'px';
+        btn.style.marginTop = value *1 + 'px';
+        header.style.top = value*0.5 +'px';
+    })
+  </script>
+
+
+  <!-- About Me Section -->
+
+  <div class="about_container" id="about">
+    <div class="about_left">
+      <h2>About Me</h2>
+      <p>Hola! 👋 I'm a super motivated and detail-obsessed Computer Science and Engineering student, diving deep into the worlds of AI, Machine Learning, Quantum Computing, and Game Development. 🚀 Looking to jump into an exciting opportunity where I can unleash my skills, bring some fresh energy, and contribute to awesome projects! Let’s team up, make some tech magic happen, and level up together! 🎮✨</p>
+    </div>
+    <div class="about_right">
+      <img src="assets/10228159.png" alt="Your Photo">
+    </div>
+  </div>
+  <div class = "project_body" id="projects">
+    <div class="showcase-container">
+      <div class="project-card">
+           <div class="left-panel">
+               <div class="logo">
+                   <i data-lucide="brain-circuit" class="logo-icon"></i>
+               </div>
+               <h2 class="project-title">AI Code Assistant</h2>
+               <p class="project-description">
+                   An intelligent coding companion powered by advanced AI. It offers real-time code suggestions, 
+                   bug detection, and performance optimization across multiple programming languages.
+               </p>
+               <div class="tech-stack">
+                   <i data-lucide="code" title="Python"></i>
+                   <i data-lucide="database" title="TensorFlow"></i>
+                   <i data-lucide="server" title="Docker"></i>
+               </div>
+               <div class="navigation">
+                   <button class="nav-btn prev" aria-label="Previous project">
+                       <i data-lucide="chevron-left"></i>
+                   </button>
+                   <button class="nav-btn next" aria-label="Next project">
+                       <i data-lucide="chevron-right"></i>
+                   </button>
+               </div>
+           </div>
+           <div class="right-panel">
+               <div class="screen">
+                   <video class="project-video" autoplay loop muted playsinline>
+                       <source src="https://example.com/videos/ai-code-assistant.mp4" type="video/mp4">
+                       Your browser does not support the video tag.
+                   </video>
+               </div>
+           </div>
+       </div>
+   </div>
+  </div>
+   <script src="script.js"></script>
+
+<!-- Technologies Section -->
+<div class="technologies_container" id="skills">
+  <h2>Tools and Technologies</h2>
+  <div class="tech-category">
+    <div class="tech-box" data-index="1">
+      <h3>Programming Languages</h3>
+      <div class="parallax-grid">
+        <div class="parallax-item">
+          <img src="assets/c.png" alt="C">
+        </div>
+        <div class="parallax-item">
+          <img src="assets/cpp.png" alt="C++">
+        </div>
+        <div class="parallax-item">
+          <img src="assets/python.png" alt="Python">
+        </div>
+        <div class="parallax-item">
+          <img src="assets/java.png" alt="Java">
+        </div>
+        <div class="parallax-item">
+          <img src="assets/csh.png" alt="C#">
+        </div>
+      </div>
+    </div>
+    <div class="tech-box" data-index="2">
+      <h3>Web Development</h3>
+      <div class="parallax-grid">
+        <div class="parallax-item">
+          <img src="assets/html.png" alt="HTML">
+        </div>
+        <div class="parallax-item">
+          <img src="assets/css.png" alt="CSS">
+        </div>
+        <div class="parallax-item">
+          <img src="assets/boot.png" alt="Bootstrap">
+        </div>
+        <div class="parallax-item">
+          <img src="assets/js.png" alt="JavaScript">
+        </div>
+        <div class="parallax-item">
+          <img src="assets/react.png" alt="React">
+        </div>
+      </div>
+    </div>
+    <div class="tech-box" data-index="3">
+      <h3>Databases</h3>
+      <div class="parallax-grid">
+        <div class="parallax-item">
+          <img src="assets/mysql.png" alt="MySQL">
+        </div>
+        <div class="parallax-item">
+          <img src="assets/SQLite.png" alt="SQLite">
+        </div>
+        <div class="parallax-item">
+          <img src="assets/oracle.png" alt="Oracle Database">
+        </div>
+      </div>
+    </div>
+    <div class="tech-box" data-index="4">
+      <h3>Game Engines</h3>
+      <div class="parallax-grid">
+        <div class="parallax-item">
+          <img src="assets/unity.png" alt="Unity">
+        </div>
+        <div class="parallax-item">
+          <img src="assets/unrealLogo.png" alt="Unreal Engine">
+        </div>
+        <div class="parallax-item">
+          <img src="assets/roblox.png" alt="Roblox">
+        </div>
+      </div>
+    </div>
+    <div class="tech-box" data-index="2">
+      <h3>Dev Tools</h3>
+      <div class="parallax-grid">
+        <div class="parallax-item">
+          <img src="assets/gitLogo.png" alt="git">
+        </div>
+        <div class="parallax-item">
+          <img src="assets/dockerLogo.png" alt="docker">
+        </div>
+        <div class="parallax-item">
+          <img src="assets/jenkinsLogo.png" alt="jenkins">
+        </div>
+      </div>
+    </div>
+    <div class="tech-box" data-index="3">
+      <h3>Hardware Tools</h3>
+      <div class="parallax-grid">
+        <div class="parallax-item">
+          <img src="assets/iotLogo.png" alt="iot">
+        </div>
+        <div class="parallax-item">
+          <img src="assets/arduinoLogo.png" alt="Adrdunio">
+        </div>
+        <div class="parallax-item">
+          <img src="assets/STM_logotype_02a_020118-01.png" alt="STM">
+        </div>
+      </div>
+    </div>
+    <div class="tech-box" data-index="3">
+      <h3>Others</h3>
+      <div class="parallax-grid">
+        <div class="parallax-item">
+          <img src="assets/vscodeLogo.png" alt="VS">
+        </div>
+        <div class="parallax-item">
+          <img src="assets/light.png" alt="Lightroom">
+        </div>
+        <div class="parallax-item">
+          <img src="assets/canvaLogo.png" alt="Canva">
+        </div>
+        <div class="parallax-item">
+          <img src="assets/matlabLogo.png" alt="Matlab">
+        </div>
+        <div class="parallax-item">
+          <img src="assets/androidstudioLogo.png" alt="Andriod">
+        </div>
+        <div class="parallax-item">
+          <img src="assets/pycharmLogo.png" alt="Pycharm">
+        </div>
+      </div>
+    </div>
+    <div class="tech-box" data-index="5">
+      <h3>Machine Learning</h3>
+      <div class="parallax-grid">
+        <div class="parallax-item">
+          <img src="assets/cirqLogo.png" alt="Scikit-learn">
+        </div>
+        <div class="parallax-item">
+          <img src="assets/tensorflowquantumLogo.png" alt="Keras">
+        </div>
+        <div class="parallax-item">
+          <img src="assets/kerasLogo.png" alt="TensorFlow">
+        </div>
+        <div class="parallax-item">
+          <img src="assets/opencvLogo.png" alt="OpenCV">
+        </div>
+        <div class="parallax-item">
+          <img src="assets/pandasLogo.png" alt="Pandas">
+        </div>
+        <div class="parallax-item">
+          <img src="assets/numpyLogo.png" alt="NumPy">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  const techBoxes = document.querySelectorAll('.tech-box');
+
+  techBoxes.forEach(box => {
+    box.addEventListener('mouseenter', () => {
+      const currentIndex = box.getAttribute('data-index');
+      const randomIndex = Math.ceil(Math.random() * techBoxes.length);
+
+      if (currentIndex !== randomIndex.toString()) {
+        const targetBox = document.querySelector(`.tech-box[data-index="${randomIndex}"]`);
+        const parent = box.parentElement;
+
+        parent.insertBefore(targetBox, box);
+        parent.insertBefore(box, targetBox.nextSibling);
+      }
+    });
+  });
+</script>
+<!-- Contact Me Section -->
+<div class="contact_container" id="contact">
+  <div class="contact_left">
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>&ensp;&ensp;<h2>&ensp;&ensp;&ensp;Contact Me</h2>
+  </div>
+  <div class="contact_right">
+    <h2>Let's Talk</h2>
+    <p>Whether you're looking to build a new website, improve your existing platform, or bring a unique project to life, I'm here to help.</p>
+    <form action="https://formsubmit.co/choudharymohith@gmail.com" method="POST">
+      <div class="form_group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="ex., abc" required>
+      </div>
+      <div class="form_group">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" placeholder="ex., 1234@gmail.com" required>
+      </div>
+      <div class="form_group">
+        <label for="query">Your message</label>
+        <textarea id="query" name="query" rows="4" placeholder="Share your thoughts or inquiries..." required></textarea>
+      </div>
+      <button type="submit">Send Message →</button>
+    </form>
+  </div>
+</div>
+<!-- Footer Section -->
+
+</body>
+</html>
